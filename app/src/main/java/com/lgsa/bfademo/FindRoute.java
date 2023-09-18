@@ -90,6 +90,14 @@ public class FindRoute extends AppCompatActivity implements OnGetSuggestionResul
         mBaiduMap.setMapType(BaiduMap.MAP_TYPE_NORMAL);
         mBaiduMap.setMyLocationEnabled(true);
         mBaiduMap.setMapType(BaiduMap.MAP_TYPE_NORMAL);
+        //设置初始显示经纬度
+        LatLng cenpt = new LatLng(31.031557,121.45367);
+        //设置缩放级别
+        float f = 16f;
+        //定义地图状态
+        MapStatusUpdate mapStatusUpdate = MapStatusUpdateFactory.newLatLngZoom(cenpt,f);
+        //改变地图状态
+        mBaiduMap.setMapStatus(mapStatusUpdate);
         mLocationClient.registerLocationListener(new MyLocationListener());
 
         myLoc=findViewById(R.id.myLoc);
