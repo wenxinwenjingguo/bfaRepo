@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".FindRoute">
+    <!--顶部返回栏-->
+    <LinearLayout
+        android:id="@+id/backLayout"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/backImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/back" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.baidu.mapapi.map.TextureMapView
+            android:id="@+id/findMapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentTop="true">
+            <EditText
+                android:id="@+id/myLoc"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edit_selector"
+                android:hint="请输入当前位置"
+                android:textColor="#000000"
+                android:textColorHint="#A8A8A8"
+                android:completionThreshold="1"
+                android:textSize="21sp"/>
+
+            <EditText
+                android:id="@+id/targetLoc"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/edit_selector"
+                android:hint="请输入目标位置"
+                android:textColor="#000000"
+                android:textColorHint="#A8A8A8"
+                android:textSize="21sp"/>
+            <Button
+                android:id="@+id/btFindRoute"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="120dp"
+                style="@style/button_two"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:text="寻找路线"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

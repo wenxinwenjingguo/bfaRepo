@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/single_1"
+            android:icon="@drawable/home"
+            android:title="主页"/>
+
+        <item
+            android:id="@+id/single_2"
+            android:icon="@drawable/upload"
+            android:title="上传"/>
+
+        <item
+            android:id="@+id/single_3"
+            android:icon="@drawable/attention"
+            android:title="关于我们"/>
+        <item
+            android:id="@+id/single_4"
+            android:icon="@drawable/setting"
+            android:title="设置"/>
+        <item
+            android:id="@+id/single_5"
+            android:icon="@drawable/exit"
+            android:title="退出"/>
+    </group>
+
+</menu>
